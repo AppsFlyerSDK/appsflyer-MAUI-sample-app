@@ -1,0 +1,62 @@
+# Xamarin/Maui-specific
+*.userprefs
+*.suo
+*.user
+*.lock
+bin/
+obj/
+.vscode/
+.DS_Store
+
+# IDE/Editor-specific
+*.sln.ide
+*.vscode/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Build Folders (you may want to keep dlls if your project is referencing them)
+bin/
+obj/
+
+# Visual Studio files
+.vscode/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+*.suo
+*.ipch/
+*.vs/
+!*.sln
+*.cachefile
+*.VC.db
+*.sqlite3
+*.sqlite
+*.pdb
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xamarin-specific files
+*.a
+*.apk
+*.dll
+*.dylib
+*.exe
+*.jar
+*.msi
+*.nupkg
+*.pdb
+*.pri
+*.so
+*.tgz
+*.tlog
+*.tp
+*.vsix
+*.vsixmanifest
+*.vstemplate
+*.zip
