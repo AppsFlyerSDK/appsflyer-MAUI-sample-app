@@ -1,0 +1,34 @@
+<Project Sdk="Xamarin.Legacy.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>
+        <!--monoandroid11.0-->
+        <!--xamarin.ios10;-->
+        xamarin.ios10;monoandroid11.0;net6.0-android;net6.0-ios
+    </TargetFrameworks>
+    <AssemblyName>AppsFlyer.NET.Lib</AssemblyName>
+    <RootNamespace>AppsFlyer.NET.Lib</RootNamespace>
+    <PackageDescription>Base AppsFlyer .NET Library</PackageDescription>
+    <PackageId>AppsFlyer.NET.Lib</PackageId>
+    <!-- Disable "BinaryFormatter is obsolete" warnings for entire project -->
+    <NoWarn>$(NoWarn);SYSLIB0011;IDE1006;</NoWarn>
+
+    <!-- Nullable -->
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>CS8600;CS8602;CS8603</WarningsAsErrors>
+
+    <!--<BuildWithMSBuildOnMono>true</BuildWithMSBuildOnMono>-->
+  </PropertyGroup>
+
+
+   <ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'ios' ">
+     <PackageReference Include="AppsFlyerXamarinBinding" Version="6.12.1" />
+   </ItemGroup>
+
+   <!--<ItemGroup Condition = "'$(TargetFramework)' == 'monoandroid12.0' Or '$(TargetFramework)' == 'net7.0-android'">-->
+   <ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'android' ">
+    <PackageReference Include="AppsFlyerXamarinBindingAndroid" Version="6.12.2" />
+   </ItemGroup>
+
+
+</Project>

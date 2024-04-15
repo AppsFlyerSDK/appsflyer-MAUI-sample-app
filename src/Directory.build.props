@@ -1,0 +1,85 @@
+<Project>
+  <PropertyGroup>
+    <!--<GenerateDocumentationFile>true</GenerateDocumentationFile>-->
+    <!--<Platform>AnyCPU</Platform>-->
+    <!--<IsTestProject>$(MSBuildProjectName.Contains('Tests'))</IsTestProject>-->
+    <!--<DebugType>embedded</DebugType>-->
+<!--    <Authors>AppsFlyer</Authors>
+    <Copyright>Copyright (c)</Copyright>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>-->
+    <!-- <PackageProjectUrl>https://appsflyer.com</PackageProjectUrl> -->
+<!--    <DefaultPackageDescription>DEFAULT_PACKAGE_DESCRIPTION</DefaultPackageDescription>
+    <PackageDescription>$(DefaultPackageDescription)</PackageDescription>
+    <Owners>qua5ar</Owners>
+    <PackageTags>xamarin;android;ios;monodroid;xamarin.android;xamarin.ios;xamarin.mac;net</PackageTags>-->
+    <!-- <PackageReleaseNotes>releases</PackageReleaseNotes> -->
+    <!-- <RepositoryUrl>https://github.com</RepositoryUrl> -->
+    <!-- <RepositoryType>git</RepositoryType> -->
+
+    <!-- Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    <!--<PublishRepositoryUrl>true</PublishRepositoryUrl>--> 
+    <!-- Embed source files that are not tracked by the source control manager in the PDB -->
+    <!--<EmbedUntrackedSources>true</EmbedUntrackedSources>-->
+    <!-- Include PDB in the built .nupkg -->
+    <!--<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
+    <!--<Nullable>enable</Nullable>-->
+    <!--<LangVersion>10</LangVersion>-->
+    <!--<EnableNETAnalyzers>True</EnableNETAnalyzers>-->
+    <!--<AnalysisLevel>latest</AnalysisLevel>-->
+    <!-- <WarningsAsErrors>nullable</WarningsAsErrors> -->
+    <!--<EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludePackageReferencesDuringMarkupCompilation>true</IncludePackageReferencesDuringMarkupCompilation>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl> -->
+  </PropertyGroup>
+
+  <!-- MonoAndroid doesn't seem to want to allow debugging for maintainers -->
+<!--  <PropertyGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>-->
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+<!--  <ItemGroup Condition="$(IsTestProject)">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
+    <PackageReference Include="xunit" Version="2.5.0" />
+    <PackageReference Include="xunit.runner.console" Version="2.5.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0" />
+    <PackageReference Include="Xunit.StaFact" Version="1.1.11" />
+    <PackageReference Include="FluentAssertions" Version="6.11.0" />
+    <PackageReference Include="Microsoft.Reactive.Testing" Version="6.0.0" />
+    <PackageReference Include="PublicApiGenerator" Version="11.0.0" />
+    <PackageReference Include="coverlet.msbuild" Version="6.0.0" PrivateAssets="All" />
+    <PackageReference Include="Verify.Xunit" Version="20.6.0" />
+  </ItemGroup>-->
+  
+<!--   <ItemGroup Condition="'$(IsTestProject)' != 'true'">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" /> 
+  </ItemGroup> -->
+  
+<!--   <PropertyGroup>
+    <SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)</SolutionDir>
+  </PropertyGroup>-->
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\logo.png" Pack="true" PackagePath="\"/>
+    <None Include="$(MSBuildThisFileDirectory)..\LICENSE" Pack="true" PackagePath="LICENSE" />
+    <None Include="$(MSBuildThisFileDirectory)..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+<!--   <ItemGroup Condition="$(MSBuildProjectName.Contains('Fody')) != 'true'">
+    <Compile Include="$(MSBuildThisFileDirectory)GlobalUsings.cs" />
+  </ItemGroup> -->
+
+<!--   <ItemGroup>	
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.6.133" PrivateAssets="all" />	
+    <PackageReference Include="stylecop.analyzers" Version="1.2.0-beta.507" PrivateAssets="all" />
+    <PackageReference Include="Roslynator.Analyzers" Version="4.3.0" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" />
+  </ItemGroup> -->
+</Project>
