@@ -1,8 +1,12 @@
 ﻿namespace Demo.NET6.MAUI;
 using AppsFlyer.NET.Lib;
+#if IOS
 using AppsFlyerXamarinBinding;
 using Foundation;
 using UIKit;
+#elif ANDROID
+// Android includes
+#endif
 
 public static class MauiProgram
 {
@@ -32,16 +36,18 @@ public static class MauiProgram
             { "test", "val" },
             { "test2", "val2" }
         });
-
+#if IOS
         Console.WriteLine("--- UUID: ---");
         var UUID = UIDevice.CurrentDevice.IdentifierForVendor.AsString();
-            Console.WriteLine(UUID);
+        Console.WriteLine(UUID);
+#endif
         // builder.Services.AddSingleton<MainViewModel>();
 
         return builder.Build();
     }
 }
 
+#if IOS
 public class GCDDelegate : AppsFlyerLibDelegate
 {
 
@@ -70,4 +76,16 @@ public class DeepLinkDelegate : AppsFlyerDeepLinkDelegate
         Console.WriteLine(result.deepLink.toString());
     }
 }
+#elif ANDROID
 
+public class GCDDelegate : AppsFlyerLibDelegate
+{
+
+}
+
+public class DeepLinkDelegate : AppsFlyerDeepLinkDelegate
+{
+
+}
+
+#endif

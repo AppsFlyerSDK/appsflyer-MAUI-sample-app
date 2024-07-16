@@ -21,17 +21,17 @@ namespace AppsFlyer.NET.Lib
     {
         public void OnAppOpenAttribution(IDictionary<string, string> p0)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Android OnAppOpenAttribution Delegate");
         }
 
         public void OnAttributionFailure(string p0)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Android OnAttributionFailure Delegate");
         }
 
         public void OnConversionDataFail(string p0)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Android OnConversionDataFail Delegate");
         }
 
         public void OnConversionDataSuccess(IDictionary<string, Java.Lang.Object> p0)
