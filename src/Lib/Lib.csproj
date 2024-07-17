@@ -4,7 +4,7 @@
     <TargetFrameworks>
         <!--monoandroid11.0-->
         <!--xamarin.ios10;-->
-        xamarin.ios10;monoandroid11.0;net6.0-android;net6.0-ios
+        xamarin.ios10;monoandroid11.0;net8.0-android;net8.0-ios
     </TargetFrameworks>
     <AssemblyName>AppsFlyer.NET.Lib</AssemblyName>
     <RootNamespace>AppsFlyer.NET.Lib</RootNamespace>
