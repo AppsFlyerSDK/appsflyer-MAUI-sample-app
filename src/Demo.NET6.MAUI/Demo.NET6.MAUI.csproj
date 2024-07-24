@@ -59,4 +59,10 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Lib\Lib.csproj" />
 	</ItemGroup>
+
+	<PropertyGroup>
+  		<MtouchLink>SdkOnly</MtouchLink>
+  		<MtouchExtraArgs>$(MtouchExtraArgs) --weak-framework=NewsstandKit</MtouchExtraArgs>
+	</PropertyGroup>
+
 </Project>

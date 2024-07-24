@@ -27,7 +27,7 @@
 
    <!--<ItemGroup Condition = "'$(TargetFramework)' == 'monoandroid12.0' Or '$(TargetFramework)' == 'net7.0-android'">-->
    <ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'android' ">
-    <PackageReference Include="AppsFlyerXamarinBindingAndroid" Version="6.12.2" />
+    <PackageReference Include="AppsFlyerXamarinBindingAndroid" Version="6.13.1" />
    </ItemGroup>
 
 
